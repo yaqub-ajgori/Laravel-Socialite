@@ -6,6 +6,10 @@ import { resolve } from 'node:path';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
+    build: {
+        manifest: true,
+        outDir: 'public/build',
+    },
     plugins: [
         laravel({
             input: ['resources/js/app.ts'],
